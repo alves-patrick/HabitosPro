@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90483F293D650A00E66624 /* HabitosProApp.swift */; };
-		7D904842293D650A00E66624 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904841293D650A00E66624 /* ContentView.swift */; };
 		7D904844293D650C00E66624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904843293D650C00E66624 /* Assets.xcassets */; };
 		7D904847293D650C00E66624 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904846293D650C00E66624 /* Preview Assets.xcassets */; };
+		7D91AFDB294695CC00363000 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91AFDA294695CC00363000 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D90483C293D650A00E66624 /* HabitosPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitosPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90483F293D650A00E66624 /* HabitosProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitosProApp.swift; sourceTree = "<group>"; };
-		7D904841293D650A00E66624 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D904843293D650C00E66624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D904846293D650C00E66624 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D91AFDA294695CC00363000 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		7D90483E293D650A00E66624 /* HabitosPro */ = {
 			isa = PBXGroup;
 			children = (
+				7D91AFD72946956000363000 /* Splash */,
 				7D90483F293D650A00E66624 /* HabitosProApp.swift */,
-				7D904841293D650A00E66624 /* ContentView.swift */,
 				7D904843293D650C00E66624 /* Assets.xcassets */,
 				7D904845293D650C00E66624 /* Preview Content */,
 			);
@@ -65,6 +65,30 @@
 				7D904846293D650C00E66624 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D91AFD72946956000363000 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7D91AFD9294695B900363000 /* Model */,
+				7D91AFD8294695B300363000 /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		7D91AFD8294695B300363000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D91AFDA294695CC00363000 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D91AFD9294695B900363000 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D904842293D650A00E66624 /* ContentView.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
+				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
