@@ -15,6 +15,16 @@ struct SplashView: View {
         
         switch state {
         case .loading:
+            ZStack {
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(20)
+                    .background(Color.white)
+                    .ignoresSafeArea()
+            }
+            
             Text("Loading")
         case .goToSignInScreen:
             Text("Carregar Tela de Login")
@@ -29,7 +39,7 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        SplashView(state: .loading)
         
     }
 }
