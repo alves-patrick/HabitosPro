@@ -9,8 +9,21 @@ import SwiftUI
 
 struct SplashView: View {
     
+    @State var state: SplashUIState = .goToSignInScreen
+    
     var body: some View {
-        Text("Ola")
+        
+        switch state {
+        case .loading:
+            Text("Loading")
+        case .goToSignInScreen:
+            Text("Carregar Tela de Login")
+        case .goTohomeScreen:
+            Text("Carregar Tela principal")
+        case .error(let msg):
+            Text("Mostrar erro: \(msg)")
+        }
+    
     }
 }
 

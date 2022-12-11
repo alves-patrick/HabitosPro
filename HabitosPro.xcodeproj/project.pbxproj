@@ -11,6 +11,7 @@
 		7D904844293D650C00E66624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904843293D650C00E66624 /* Assets.xcassets */; };
 		7D904847293D650C00E66624 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904846293D650C00E66624 /* Preview Assets.xcassets */; };
 		7D91AFDB294695CC00363000 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91AFDA294695CC00363000 /* SplashView.swift */; };
+		7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91AFDC2946983700363000 /* SplashUIState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		7D904843293D650C00E66624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D904846293D650C00E66624 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D91AFDA294695CC00363000 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7D91AFDC2946983700363000 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		7D91AFD9294695B900363000 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7D91AFDC2946983700363000 /* SplashUIState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
 			);
