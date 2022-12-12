@@ -15,16 +15,8 @@ struct SplashView: View {
         
         switch state {
         case .loading:
-            ZStack {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding(20)
-                    .background(Color.white)
-                    .ignoresSafeArea()
-            }
-            
+            loadingView()
+    
             Text("Loading")
         case .goToSignInScreen:
             Text("Carregar Tela de Login")
@@ -33,10 +25,53 @@ struct SplashView: View {
         case .error(let msg):
             Text("Mostrar erro: \(msg)")
         }
-    
     }
 }
 
+// 1. Compartilhamento | Objetos
+struct LoadingView: View {
+    var body: some View {
+        ZStack {
+            Image("logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .background(Color.white)
+                .ignoresSafeArea()
+        }
+    }
+}
+
+// 2. Variaveis em extensions
+extension SplashView {
+    var loading: some View {
+        ZStack {
+            Image("logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .background(Color.white)
+                .ignoresSafeArea()
+        }
+    }
+}
+
+// 3. Funcoes em extensions
+extension SplashView {
+    func loadingView() -> some View {
+        ZStack {
+            Image("logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .background(Color.white)
+                .ignoresSafeArea()
+        }
+    }
+}
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
         SplashView(state: .loading)
