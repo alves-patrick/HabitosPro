@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .goToSignInScreen
+    @State var viewModel: SplashViewModel
+    
     
     var body: some View {
         
-        switch state {
+        switch viewModel.uiState {
         case .loading:
             loadingView()
     
@@ -83,7 +84,8 @@ extension SplashView {
 }
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView(state: .error("teste de erro no servidor"))
+        let viewModel = SplashViewModel()
+        SplashView(viewModel: viewModel)
         
     }
 }
