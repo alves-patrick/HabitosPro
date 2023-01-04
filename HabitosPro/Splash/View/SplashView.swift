@@ -13,19 +13,24 @@ struct SplashView: View {
     
     
     var body: some View {
+        Group {
         
-        switch viewModel.uiState {
-        case .loading:
-            loadingView()
-    
-            Text("Loading")
-        case .goToSignInScreen:
-            Text("Carregar Tela de Login")
-        case .goTohomeScreen:
-            Text("Carregar Tela principal")
-        case .error(let msg):
-            loadingView(error:msg)
-        }
+            switch viewModel.uiState {
+            case .loading:
+                loadingView()
+                
+                Text("Loading")
+            case .goToSignInScreen:
+                Text("Carregar Tela de Login")
+            case .goTohomeScreen:
+                Text("Carregar Tela principal")
+            case .error(let msg):
+                loadingView(error:msg)
+            }
+        }.onAppear(perform: {
+            viewModel.onAppear()
+            
+        })
     }
 }
 
