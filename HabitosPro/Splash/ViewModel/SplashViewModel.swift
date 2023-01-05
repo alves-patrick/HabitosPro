@@ -20,4 +20,8 @@ class SplashViewModel: ObservableObject {
         }
         
     }
+    
+    func SignInView() -> some View {
+        return SplashViewRouter.makeSignInView()
+    }
 }
