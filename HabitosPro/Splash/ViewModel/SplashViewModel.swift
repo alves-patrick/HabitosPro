@@ -14,7 +14,7 @@ class SplashViewModel: ObservableObject {
     func onAppear() {
         // faz algo assincrono e muda o esatdo do uiState
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             // aqui e chamd o depois de 2 segundos
             self.uiState = .goToSignInScreen
         }
