@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var viewModel: SplashViewModel
+    @ObservedObject var viewModel: SplashViewModel
+    
+    
     
     
     var body: some View {
