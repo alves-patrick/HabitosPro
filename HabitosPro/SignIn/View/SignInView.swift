@@ -27,10 +27,29 @@ struct SignInView: View {
                 .font(Font.system(.title).bold())
                 .padding(.bottom, 8)
             
+            numberField
+            
+            passwordField
+            
+        }
+            
+        }
+    }
+    
+    extension SignInView {
+        var numberField: some View {
             TextField("", text: $email)
                 .border(Color.black)
         }
     }
+
+
+extension SignInView {
+var passwordField: some View {
+    SecureField("", text: $password)
+        .border(Color.black)
+  }
+}
     struct SignInView_Previews: PreviewProvider {
         static var previews: some View {
             let viewModel = SignInViewModel()
@@ -38,4 +57,4 @@ struct SignInView: View {
             
         }
     }
-}
+
