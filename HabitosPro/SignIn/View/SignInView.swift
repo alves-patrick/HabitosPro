@@ -30,7 +30,8 @@ struct SignInView: View {
             numberField
             
             passwordField
-            
+        
+            enterButton
         }
             
         }
@@ -49,6 +50,14 @@ var passwordField: some View {
     SecureField("", text: $password)
         .border(Color.black)
   }
+}
+
+extension SignInView {
+    var enterButton: some View {
+        Button("Entrar")  {
+            
+        }
+    }
 }
     struct SignInView_Previews: PreviewProvider {
         static var previews: some View {
