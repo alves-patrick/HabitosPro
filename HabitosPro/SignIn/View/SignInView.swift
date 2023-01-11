@@ -32,6 +32,8 @@ struct SignInView: View {
             passwordField
         
             enterButton
+            
+            registerLink
         }
             
         }
@@ -57,6 +59,14 @@ extension SignInView {
         Button("Entrar")  {
             
         }
+    }
+}
+
+extension SignInView {
+    var registerLink: some View {
+        Text("Ainda nao possui cadastro ativo?")
+            .foregroundColor(.gray)
+            .padding(.top, 48)
     }
 }
     struct SignInView_Previews: PreviewProvider {
