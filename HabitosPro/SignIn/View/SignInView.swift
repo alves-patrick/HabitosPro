@@ -13,6 +13,7 @@ struct SignInView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var action: Int? = 0
     
     
     var body: some View {
@@ -64,11 +65,26 @@ extension SignInView {
 
 extension SignInView {
     var registerLink: some View {
-        Text("Ainda nao possui cadastro ativo?")
-            .foregroundColor(.gray)
-            .padding(.top, 48)
+        VStack{
+            Text("Ainda nao possui cadastro ativo?")
+                .foregroundColor(.gray)
+                .padding(.top, 48)
+            
+            ZStack {
+                NavigationLink(
+                    destination: Text("Tela de cadastro"),
+                    tag: 1,
+                    selection: $action,
+                    label: { EmptyView() })
+                
+                Button("Realize seu cadastro") {
+                    self.action = 1
+                }
+            }
+        }
     }
 }
+    
     struct SignInView_Previews: PreviewProvider {
         static var previews: some View {
             let viewModel = SignInViewModel()
@@ -76,4 +92,5 @@ extension SignInView {
             
         }
     }
+    
 
