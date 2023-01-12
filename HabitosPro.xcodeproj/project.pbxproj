@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D6DCCD1296F9414001BB461 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6DCCD0296F9414001BB461 /* SignUpView.swift */; };
 		7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */; };
 		7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90483F293D650A00E66624 /* HabitosProApp.swift */; };
 		7D904844293D650C00E66624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904843293D650C00E66624 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D6DCCD0296F9414001BB461 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		7D90483C293D650A00E66624 /* HabitosPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitosPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90483F293D650A00E66624 /* HabitosProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitosProApp.swift; sourceTree = "<group>"; };
@@ -42,6 +44,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D6DCCCC296F93B4001BB461 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7D6DCCCF296F93E6001BB461 /* View */,
+				7D6DCCCE296F93DD001BB461 /* ViewModel */,
+				7D6DCCCD296F93D7001BB461 /* Model */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		7D6DCCCD296F93D7001BB461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D6DCCCE296F93DD001BB461 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D6DCCCF296F93E6001BB461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D6DCCD0296F9414001BB461 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7D82E5192965DEE9007E4405 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +104,7 @@
 		7D90483E293D650A00E66624 /* HabitosPro */ = {
 			isa = PBXGroup;
 			children = (
+				7D6DCCCC296F93B4001BB461 /* SignUp */,
 				7DB8FF3129674829004F3B6E /* SignIn */,
 				7D91AFD72946956000363000 /* Splash */,
 				7D90483F293D650A00E66624 /* HabitosProApp.swift */,
@@ -220,6 +255,7 @@
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
 				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
+				7D6DCCD1296F9414001BB461 /* SignUpView.swift in Sources */,
 				7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */,
 				7DB8FF3A29674A89004F3B6E /* SplashViewRouter.swift in Sources */,
 				7DB8FF36296748CF004F3B6E /* SignInView.swift in Sources */,

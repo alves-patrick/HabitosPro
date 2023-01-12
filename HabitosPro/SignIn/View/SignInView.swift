@@ -95,7 +95,7 @@ extension SignInView {
             
             ZStack {
                 NavigationLink(
-                    destination: Text("Tela de cadastro"),
+                    destination: viewModel.SignUpView(),
                     tag: 1,
                     selection: $action,
                     label: { EmptyView() })
