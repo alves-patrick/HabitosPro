@@ -17,6 +17,10 @@
 		7DB8FF36296748CF004F3B6E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8FF35296748CF004F3B6E /* SignInView.swift */; };
 		7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8FF3729674968004F3B6E /* SignInViewModel.swift */; };
 		7DB8FF3A29674A89004F3B6E /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8FF3929674A89004F3B6E /* SplashViewRouter.swift */; };
+		7DE5C82A29722134003ECCFD /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C82929722134003ECCFD /* SignInViewRouter.swift */; };
+		7DE5C82C297222B5003ECCFD /* SignInUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C82B297222B5003ECCFD /* SignInUiState.swift */; };
+		7DE5C832297225AF003ECCFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C831297225AF003ECCFD /* HomeView.swift */; };
+		7DE5C834297225CB003ECCFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C833297225CB003ECCFD /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		7DB8FF35296748CF004F3B6E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7DB8FF3729674968004F3B6E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		7DB8FF3929674A89004F3B6E /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
+		7DE5C82929722134003ECCFD /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
+		7DE5C82B297222B5003ECCFD /* SignInUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUiState.swift; sourceTree = "<group>"; };
+		7DE5C831297225AF003ECCFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7DE5C833297225CB003ECCFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		7D90483E293D650A00E66624 /* HabitosPro */ = {
 			isa = PBXGroup;
 			children = (
+				7DE5C82D2972255B003ECCFD /* Home */,
 				7D6DCCCC296F93B4001BB461 /* SignUp */,
 				7DB8FF3129674829004F3B6E /* SignIn */,
 				7D91AFD72946956000363000 /* Splash */,
@@ -162,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB8FF3729674968004F3B6E /* SignInViewModel.swift */,
+				7DE5C82929722134003ECCFD /* SignInViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 		7DB8FF3329674850004F3B6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DE5C82B297222B5003ECCFD /* SignInUiState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +188,39 @@
 			isa = PBXGroup;
 			children = (
 				7DB8FF35296748CF004F3B6E /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DE5C82D2972255B003ECCFD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7DE5C83029722593003ECCFD /* View */,
+				7DE5C82F29722587003ECCFD /* ViewModel */,
+				7DE5C82E29722564003ECCFD /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7DE5C82E29722564003ECCFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DE5C82F29722587003ECCFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DE5C833297225CB003ECCFD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7DE5C83029722593003ECCFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DE5C831297225AF003ECCFD /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,7 +298,11 @@
 				7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
+				7DE5C82A29722134003ECCFD /* SignInViewRouter.swift in Sources */,
 				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
+				7DE5C832297225AF003ECCFD /* HomeView.swift in Sources */,
+				7DE5C82C297222B5003ECCFD /* SignInUiState.swift in Sources */,
+				7DE5C834297225CB003ECCFD /* HomeViewModel.swift in Sources */,
 				7D6DCCD1296F9414001BB461 /* SignUpView.swift in Sources */,
 				7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */,
 				7DB8FF3A29674A89004F3B6E /* SplashViewRouter.swift in Sources */,
