@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct signUpView: View {
     
     @State var fullName = ""
     @State var email = ""
@@ -25,4 +25,27 @@ struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
     }
+}
+
+extension signUpView {
+    var numberField: some View {
+        TextField("", text: $email)
+            .border(Color.black)
+    }
+}
+
+
+extension signUpView {
+var passwordField: some View {
+SecureField("", text: $password)
+    .border(Color.black)
+}
+}
+
+extension signUpView {
+var enterButton: some View {
+    Button("Entrar")  {
+        
+    }
+}
 }

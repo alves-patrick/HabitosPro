@@ -25,6 +25,7 @@ class SplashViewModel: ObservableObject {
         return SplashViewRouter.makeSignInView()
     }
 }
-func SignUpView() -> some View {
+func signUpView() -> some View {
     return SignInViewRouter.makeSignUpView()
+}
 }

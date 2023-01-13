@@ -14,7 +14,7 @@ enum SplashViewRouter {
         return SignInView(viewModel: viewModel)
     }
     
-    static func makeSignUpView() -> some View {
-        return SignUpView()
+    static func makesignUpView() -> some View {
+        return signUpView()
     }
 }
