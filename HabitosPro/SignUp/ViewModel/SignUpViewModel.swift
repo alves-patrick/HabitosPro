@@ -13,7 +13,7 @@ class SignUpViewModel: ObservableObject {
     
 }
 
-extension SignInViewModel {
+extension SignUpViewModel {
   func homeView() -> some View {
     return SignInViewRouter.makeHomeView()
 
