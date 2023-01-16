@@ -112,7 +112,9 @@ extension SignUpView {
                     .tag(value)
                 
             }
-        }
+        }.pickerStyle(SegmentedPickerStyle())
+            .padding(.top, 16)
+            .padding(.bottom, 32)
     }
 }
 
