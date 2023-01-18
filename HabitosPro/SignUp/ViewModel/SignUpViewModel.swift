@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 class SignUpViewModel: ObservableObject {
+    
+    var publisher: PassthroughSubject<Bool, Never>!
     
     @Published var uiState: SignUpUIState = .none
     
@@ -15,8 +18,9 @@ class SignUpViewModel: ObservableObject {
         self.uiState = .loading
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.uiState = .error("Usuario ja existente")
-         // self.uiState = .goToHomeScreen
+     //       self.uiState = .error("Usuario ja existente")
+         self.uiState = .success
+         self.publisher.send(true)
         }
         
         
@@ -26,7 +30,7 @@ class SignUpViewModel: ObservableObject {
 
 extension SignUpViewModel {
   func homeView() -> some View {
-    return SignInViewRouter.makeHomeView()
+      return SignInViewRouter.makeHomeView()
 
   }
 }
