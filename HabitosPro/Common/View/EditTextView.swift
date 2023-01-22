@@ -14,10 +14,14 @@ struct EditTextView: View {
 }
 struct EditTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) { value in
-            EditTextView()
+        ForEach(ColorScheme.allCases, id: \.self) {
+            VStack {
+                EditTextView()
+                    .padding()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .previewDevice("iPhone 14 Pro Max")
-                .preferredColorScheme(value)
+                .preferredColorScheme($0)
         }
     }
 }
