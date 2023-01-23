@@ -70,7 +70,6 @@ struct SignInView: View {
           }
           .frame(maxWidth:.infinity, maxHeight: .infinity)
           .padding(.horizontal, 32)
-          .background(Color.white)
           .navigationBarTitle("Login", displayMode: .inline)
           .navigationBarHidden(navigationHidden)
         }
@@ -88,8 +87,13 @@ struct SignInView: View {
 
 extension SignInView {
   var emailField: some View {
-    TextField("", text: $email)
-      .border(Color.black)
+ //   TextField("", text: $email)
+ //     .border(Color.black)
+      EditTextView(text: $email,
+                   placeholder:"E-mail",
+                   keyboard: .emailAddress,
+                   error: "e-mail invalido",
+                   failure: email.count < 5)
   }
 }
 
@@ -132,11 +136,13 @@ extension SignInView {
 }
 
 struct SignInView_Previews: PreviewProvider {
-  static var previews: some View {
-    let viewModel = SignInViewModel()
-    SignInView(viewModel: viewModel)
-    //    SplashView(state: .loading)
-  }
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self) {
+            let viewModel = SignInViewModel()
+            SignInView(viewModel: viewModel)
+                .previewDevice("iPhone 14 Pro Max")
+                .preferredColorScheme($0)
+        }
+    }
 }
-
 
