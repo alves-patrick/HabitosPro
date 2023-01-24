@@ -50,9 +50,9 @@ struct SignInView: View {
                 
                 registerLink
                 
-                Text("Copyright @YYY")
+                Text("Copyright - Patrick Alves LTDA 2022")
                   .foregroundColor(Color.gray)
-                  .font(Font.system(size: 16).bold())
+                  .font(Font.system(size: 13).bold())
                   .padding(.top, 16)
               }
               
@@ -87,13 +87,11 @@ struct SignInView: View {
 
 extension SignInView {
   var emailField: some View {
- //   TextField("", text: $email)
- //     .border(Color.black)
       EditTextView(text: $email,
                    placeholder:"E-mail",
                    keyboard: .emailAddress,
                    error: "e-mail invalido",
-                   failure: email.count < 5)
+                   failure: !email.isEmail())
   }
 }
 
