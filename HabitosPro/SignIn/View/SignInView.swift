@@ -88,9 +88,9 @@ struct SignInView: View {
 extension SignInView {
   var emailField: some View {
       EditTextView(text: $email,
-                   placeholder:"E-mail",
+                   placeholder: "E-mail",
                    keyboard: .emailAddress,
-                   error: "e-mail invalido",
+                   error: "E-mail invalido",
                    failure: !email.isEmail())
   }
 }
@@ -98,9 +98,9 @@ extension SignInView {
 extension SignInView {
   var passwordField: some View {
       EditTextView(text: $password,
-                   placeholder:"Senha",
+                   placeholder: "Senha",
                    keyboard: .emailAddress,
-                   error: "Senha deve ter ao meno 8 caracteres",
+                   error: "Senha deve ter ao menos 8 caracteres",
                    failure: password.count < 8,
                    isSecure: true)
   }
@@ -108,11 +108,15 @@ extension SignInView {
 
 extension SignInView {
   var enterButton: some View {
-    Button("Entrar") {
-      viewModel.login(email: email, password: password)
+      LoadingButtonView(action: {
+          viewModel.login(email: email, password: password)
+      }, text:  "Entrar",
+     showProgress: self.viewModel.uiState ==
+     SignInUIState.loading,
+     disabled: !email.isEmail() || password.count < 8)
     }
   }
-}
+
 
 extension SignInView {
   var registerLink: some View {
