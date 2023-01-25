@@ -97,8 +97,12 @@ extension SignInView {
 
 extension SignInView {
   var passwordField: some View {
-    SecureField("", text: $password)
-      .border(Color.orange)
+      EditTextView(text: $password,
+                   placeholder:"Senha",
+                   keyboard: .emailAddress,
+                   error: "Senha deve ter ao meno 8 caracteres",
+                   failure: password.count < 8,
+                   isSecure: true)
   }
 }
 
