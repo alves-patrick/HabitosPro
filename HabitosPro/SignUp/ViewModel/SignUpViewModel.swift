@@ -42,10 +42,9 @@ class SignUpViewModel: ObservableObject {
         
         WebService.postUser(request: SignUpRequest(fullName: fullName,
                                                    email: email,
-                                                   document: document,
+                                                   password: password, document: document,
                                                    phone: phone,
                                                    birthday: birthday,
-                                                   password: password,
                                                    gender: gender.index))
         
     //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
