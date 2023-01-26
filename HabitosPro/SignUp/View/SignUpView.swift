@@ -9,21 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    // nome completo
-    // email
-    // senha
-    // cpf
-    // telefone
-    // data de nascimento
-    // genero
-    
-    @State var fullName = ""
-    @State var email = ""
-    @State var password = ""
-    @State var document = ""
-    @State var phone = ""
-    @State var birthday = ""
-    @State var gender = Gender.male
+   
     
     @ObservedObject var viewModel: SignUpViewModel
     
@@ -36,13 +22,15 @@ struct SignUpView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         
                         Text("Cadastro")
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("textcolor"))
                             .font(Font.system(.title).bold())
                             .padding(.bottom, 8)
                         
                         fullNameField
                         
                         emailField
+                        
+                        passwordField
                         
                         documentField
                         
@@ -74,49 +62,72 @@ struct SignUpView: View {
 }
     extension SignUpView {
         var fullNameField: some View {
-            TextField("", text: $fullName)
-                .border(Color.black)
+            EditTextView(text: $viewModel.fullName,
+                         placeholder: "Entre com seu nome completo *",
+                         keyboard: .alphabet,
+                         error: "Nome invalido",
+                         failure: viewModel.fullName.count < 3 )
         }
     }
     
     extension SignUpView {
         var emailField: some View {
-            TextField("", text: $email)
-                .border(Color.black)
+            EditTextView(text: $viewModel.email,
+                         placeholder: "Entre com seu e-mail",
+                         keyboard: .emailAddress,
+                         error: "E-mail invalido",
+                         failure: !viewModel.email.isEmail())
         }
     }
     
     extension SignUpView {
         var passwordField: some View {
-            SecureField("", text: $password)
-                .border(Color.orange)
+            EditTextView(text: $viewModel.password,
+                         placeholder: "Entre com sua senha *",
+                         keyboard: .emailAddress,
+                         error: "Senha deve ter ao menos 8 caracteres",
+                         failure: viewModel.password.count < 8,
+                         isSecure: true)
         }
     }
     
     extension SignUpView {
         var documentField: some View {
-            TextField("", text: $document)
-                .border(Color.black)
+            EditTextView(text: $viewModel.document,
+                         placeholder: "Entre com seu CPF *",
+                         keyboard: .numberPad,
+                         error: "CPF invalido",
+                         failure: viewModel.document.count != 11 )
+            // TODO: mask
+            // TODO: isDisabled
         }
     }
     
     extension SignUpView {
         var phoneField: some View {
-            TextField("", text: $phone)
-                .border(Color.black)
+            EditTextView(text: $viewModel.phone,
+                         placeholder: "Entre com seu celular *",
+                         keyboard: .emailAddress,
+                         error: "Entre com DDd + 8 ou 9 digitos",
+                         failure: viewModel.phone.count < 10 || viewModel.phone.count >= 12)
+            // TODO: mask
         }
     }
     
     extension SignUpView {
         var birthdayField: some View {
-            TextField("", text: $birthday)
-                .border(Color.black)
+            EditTextView(text: $viewModel.birthday,
+                         placeholder: "Entre com sua data de nascimento *",
+                         keyboard: .default,
+                         error: "Data deve ser dd/MM/yyyy",
+                         failure: viewModel.birthday.count != 10)
+            // TODO: mask
         }
     }
     
     extension SignUpView {
         var genderField: some View {
-            Picker("Gender", selection: $gender) {
+            Picker("Gender", selection: $viewModel.gender) {
                 ForEach(Gender.allCases, id: \.self) { value in
                     Text(value.rawValue)
                         .tag(value)
@@ -130,15 +141,28 @@ struct SignUpView: View {
     
     extension SignUpView {
         var saveButton: some View {
-            Button("Realize o seu Cadastro") {
+            LoadingButtonView(action: {
                 viewModel.SignUp()
+            },
+            text:  "Realize seu Cadastro",
+           showProgress: self.viewModel.uiState ==
+           SignUpUIState.loading,
+                              disabled: !viewModel.email.isEmail() ||
+                              viewModel.password.count < 8 ||
+                              viewModel.fullName.count < 3 ||
+                              viewModel.document.count != 11 ||
+                              viewModel.phone.count < 10 || viewModel.phone.count >= 12 ||
+                              viewModel.birthday.count != 10)
             }
         }
-    }
     
     struct SignUpView_Previews: PreviewProvider {
         static var previews: some View {
-            SignUpView(viewModel: SignUpViewModel())
+                ForEach(ColorScheme.allCases, id: \.self) {
+                    SignUpView(viewModel: SignUpViewModel())
+                        .previewDevice("iPhone 14 Pro Max")
+                        .preferredColorScheme($0)
+                }
         }
     }
     
