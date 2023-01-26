@@ -31,7 +31,7 @@ struct EditTextView: View {
                     .textFieldStyle(CustomTextFieldStyle())
             }
                 
-            if let error = error,!text.isEmpty {
+            if let error = error, failure == true, !text.isEmpty {
                 Text(error).foregroundColor(.red)
             }
         }
