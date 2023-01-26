@@ -25,16 +25,23 @@ class SignUpViewModel: ObservableObject {
     func SignUp() {
         self.uiState = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        WebService.postUser(fullName: fullName,
+                            email: email,
+                            password: password,
+                            document: document,
+                            phone: phone,
+                            birthday: birthday,
+                            gender: gender.index)
+        
+    //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
      //       self.uiState = .error("Usuario ja existente")
-         self.uiState = .success
-         self.publisher.send(true)
+      //   self.uiState = .success
+      //   self.publisher.send(true)
         }
         
         
     }
     
-}
 
 extension SignUpViewModel {
   func homeView() -> some View {

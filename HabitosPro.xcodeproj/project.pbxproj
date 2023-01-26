@@ -13,6 +13,7 @@
 		7D61BD582975D2FB008D8502 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61BD572975D2FB008D8502 /* SignUpViewRouter.swift */; };
 		7D65F03D29799DA600EAE3FF /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D65F03C29799DA600EAE3FF /* EditTextView.swift */; };
 		7D6DCCD1296F9414001BB461 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6DCCD0296F9414001BB461 /* SignUpView.swift */; };
+		7D82DBC729830DB6004178B8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82DBC629830DB6004178B8 /* WebService.swift */; };
 		7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */; };
 		7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90483F293D650A00E66624 /* HabitosProApp.swift */; };
 		7D904844293D650C00E66624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904843293D650C00E66624 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		7D61BD572975D2FB008D8502 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 		7D65F03C29799DA600EAE3FF /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
 		7D6DCCD0296F9414001BB461 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7D82DBC629830DB6004178B8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		7D90483C293D650A00E66624 /* HabitosPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitosPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90483F293D650A00E66624 /* HabitosProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitosProApp.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		7D52384A2973765000FCF349 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7D82DBC529830D8F004178B8 /* Network */,
 				7D9EBF892980878E0041828E /* Lang */,
 				7D65F03B29799D5E00EAE3FF /* View */,
 				7D52384B2973768400FCF349 /* Gender.swift */,
@@ -120,6 +123,14 @@
 				7D6DCCD0296F9414001BB461 /* SignUpView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7D82DBC529830D8F004178B8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7D82DBC629830DB6004178B8 /* WebService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7D82E5192965DEE9007E4405 /* ViewModel */ = {
@@ -360,6 +371,7 @@
 				7DE5C82A29722134003ECCFD /* SignInViewRouter.swift in Sources */,
 				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
 				7DE5C832297225AF003ECCFD /* HomeView.swift in Sources */,
+				7D82DBC729830DB6004178B8 /* WebService.swift in Sources */,
 				7DE5C82C297222B5003ECCFD /* SignInUiState.swift in Sources */,
 				7D61BD562975D1AD008D8502 /* SignUpViewModel.swift in Sources */,
 				7D61BD542975D12C008D8502 /* SignUpUIState.swift in Sources */,
