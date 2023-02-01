@@ -45,7 +45,13 @@ class SignUpViewModel: ObservableObject {
                                                    password: password, document: document,
                                                    phone: phone,
                                                    birthday: birthday,
-                                                   gender: gender.index))
+                                                   gender: gender.index)) {(sucessResponse, errorResponse) in
+            if let error = errorResponse {
+                self.uiState = .error(error.detail)
+            }
+            
+            
+        }
         
     //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
      //       self.uiState = .error("Usuario ja existente")
