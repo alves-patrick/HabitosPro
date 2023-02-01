@@ -47,10 +47,17 @@ class SignUpViewModel: ObservableObject {
                                                    birthday: birthday,
                                                    gender: gender.index)) {(sucessResponse, errorResponse) in
             if let error = errorResponse {
-                self.uiState = .error(error.detail)
+                DispatchQueue.main.async {
+                    self.uiState = .error(error.detail)
+                }
             }
-            
-            
+              
+            if let sucess = sucessResponse {
+                self.publisher.send(sucess)
+                if sucess {
+                    self.uiState = .success
+                }
+            }
         }
         
     //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
