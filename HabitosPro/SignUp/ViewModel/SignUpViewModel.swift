@@ -51,15 +51,16 @@ class SignUpViewModel: ObservableObject {
                     self.uiState = .error(error.detail)
                 }
             }
-              
+            
             if let sucess = sucessResponse {
-                self.publisher.send(sucess)
-                if sucess {
-                    self.uiState = .success
+                DispatchQueue.main.async {
+                    self.publisher.send(sucess)
+                    if sucess {
+                        self.uiState = .success
+                    }
                 }
             }
         }
-        
     //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
      //       self.uiState = .error("Usuario ja existente")
       //   self.uiState = .success
