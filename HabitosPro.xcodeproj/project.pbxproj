@@ -31,6 +31,7 @@
 		7DE5C82C297222B5003ECCFD /* SignInUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C82B297222B5003ECCFD /* SignInUiState.swift */; };
 		7DE5C832297225AF003ECCFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C831297225AF003ECCFD /* HomeView.swift */; };
 		7DE5C834297225CB003ECCFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5C833297225CB003ECCFD /* HomeViewModel.swift */; };
+		7DF15F1C298AF6CA00E8CC6D /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF15F1B298AF6CA00E8CC6D /* SignUpResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		7DE5C82B297222B5003ECCFD /* SignInUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUiState.swift; sourceTree = "<group>"; };
 		7DE5C831297225AF003ECCFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7DE5C833297225CB003ECCFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7DF15F1B298AF6CA00E8CC6D /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				7D61BD532975D12C008D8502 /* SignUpUIState.swift */,
 				7D82DBC82983214A004178B8 /* SignUpRequest.swift */,
+				7DF15F1B298AF6CA00E8CC6D /* SignUpResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF15F1C298AF6CA00E8CC6D /* SignUpResponse.swift in Sources */,
 				7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
