@@ -37,9 +37,9 @@ class SignInViewModel: ObservableObject {
   func login() {
     self.uiState = .loading
     
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-      self.uiState = .error("usuario nao existe")
-    }
+      WebService.login(request: SignInRequest(email: email,
+                                             password: password)) {(sucessResponse, errorResponse) in
+      }
   }
   
 }
