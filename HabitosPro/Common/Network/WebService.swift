@@ -125,7 +125,7 @@ enum WebService {
     }
   }
   
-  static func login(request: SignInRequest, completion: @escaping (SignInResponse?, ErrorResponse?) -> Void) {
+  static func login(request: SignInRequest, completion: @escaping (SignInResponse?, SignInErrorResponse?) -> Void) {
     call(path: .login, params: [
       URLQueryItem(name: "username", value: request.email),
       URLQueryItem(name: "password", value: request.password)
@@ -135,7 +135,7 @@ enum WebService {
           if let data = data {
             if error == .unauthorized {
               let decoder = JSONDecoder()
-              let response = try? decoder.decode(ErrorResponse.self, from: data)
+              let response = try? decoder.decode(SignInErrorResponse.self, from: data)
               completion(nil, response)
             }
           }

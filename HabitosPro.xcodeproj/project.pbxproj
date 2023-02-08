@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D1F3DF12991E1DC00B837B0 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F3DF02991E1DC00B837B0 /* SignInResponse.swift */; };
+		7D295CF929931B6A00C7978E /* SignInErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D295CF829931B6A00C7978E /* SignInErrorResponse.swift */; };
 		7D52384C2973768400FCF349 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52384B2973768400FCF349 /* Gender.swift */; };
 		7D61BD542975D12C008D8502 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61BD532975D12C008D8502 /* SignUpUIState.swift */; };
 		7D61BD562975D1AD008D8502 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61BD552975D1AD008D8502 /* SignUpViewModel.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7D1F3DF02991E1DC00B837B0 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		7D295CF829931B6A00C7978E /* SignInErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInErrorResponse.swift; sourceTree = "<group>"; };
 		7D52384B2973768400FCF349 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		7D61BD532975D12C008D8502 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
 		7D61BD552975D1AD008D8502 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				7DE5C82B297222B5003ECCFD /* SignInUiState.swift */,
 				7DED9B6429908D9B0079AE14 /* SignInRequest.swift */,
 				7D1F3DF02991E1DC00B837B0 /* SignInResponse.swift */,
+				7D295CF829931B6A00C7978E /* SignInErrorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
 				7DBB21F72981DA7300655654 /* LoadingButtonView.swift in Sources */,
+				7D295CF929931B6A00C7978E /* SignInErrorResponse.swift in Sources */,
 				7D9EBF8B298087C70041828E /* String+Extension.swift in Sources */,
 				7DED9B6529908D9B0079AE14 /* SignInRequest.swift in Sources */,
 				7D61BD582975D2FB008D8502 /* SignUpViewRouter.swift in Sources */,
