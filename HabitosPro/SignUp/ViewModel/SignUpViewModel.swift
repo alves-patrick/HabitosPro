@@ -53,22 +53,35 @@ class SignUpViewModel: ObservableObject {
             }
             
             if let sucess = sucessResponse {
-                DispatchQueue.main.async {
-                    self.publisher.send(sucess)
-                    if sucess {
+                
+                WebService.login(request: SignInRequest(email: self.email,
+                                                        password: self.password)) { (successResponse, errorResponse) in
+                  
+                  if let errorSignIn = errorResponse {
+                    DispatchQueue.main.async {
+                      // Main Thread
+                      self.uiState = .error(errorSignIn.detail.message)
+                    }
+                  }
+                  
+                  if let successSignIn = successResponse {
+                    DispatchQueue.main.async {
+                      print(successSignIn)
+                        self.publisher.send(sucess)
                         self.uiState = .success
+                    }
+                  }
+                  
+                }
+                DispatchQueue.main.async {
+                 
                     }
                 }
             }
         }
-    //    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-     //       self.uiState = .error("Usuario ja existente")
-      //   self.uiState = .success
-      //   self.publisher.send(true)
+
         }
         
-        
-    }
     
 
 extension SignUpViewModel {
