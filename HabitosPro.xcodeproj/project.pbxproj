@@ -36,6 +36,7 @@
 		7DED9B6529908D9B0079AE14 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED9B6429908D9B0079AE14 /* SignInRequest.swift */; };
 		7DF15F1C298AF6CA00E8CC6D /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF15F1B298AF6CA00E8CC6D /* SignUpResponse.swift */; };
 		7DF15F20298AFA2400E8CC6D /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF15F1F298AFA2400E8CC6D /* ErrorResponse.swift */; };
+		7DF2EDC6299C4E6F0064E539 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF2EDC5299C4E6F0064E539 /* SignInInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		7DED9B6429908D9B0079AE14 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		7DF15F1B298AF6CA00E8CC6D /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		7DF15F1F298AFA2400E8CC6D /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		7DF2EDC5299C4E6F0064E539 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 		7DB8FF3129674829004F3B6E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				7DF2EDC4299C4E550064E539 /* Interactor */,
 				7DB8FF342967485B004F3B6E /* View */,
 				7DB8FF3229674843004F3B6E /* ViewModel */,
 				7DB8FF3329674850004F3B6E /* Model */,
@@ -318,6 +321,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7DF2EDC4299C4E550064E539 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7DF2EDC5299C4E6F0064E539 /* SignInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,6 +411,7 @@
 				7DE5C82A29722134003ECCFD /* SignInViewRouter.swift in Sources */,
 				7D91AFDB294695CC00363000 /* SplashView.swift in Sources */,
 				7DE5C832297225AF003ECCFD /* HomeView.swift in Sources */,
+				7DF2EDC6299C4E6F0064E539 /* SignInInteractor.swift in Sources */,
 				7D82DBC729830DB6004178B8 /* WebService.swift in Sources */,
 				7DE5C82C297222B5003ECCFD /* SignInUiState.swift in Sources */,
 				7D61BD562975D1AD008D8502 /* SignUpViewModel.swift in Sources */,
