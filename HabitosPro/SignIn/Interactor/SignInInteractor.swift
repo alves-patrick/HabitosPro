@@ -9,10 +9,14 @@ import Foundation
  
 class SignInInteractor {
     
+    private let remote: RemoteDataSource = .shared
+    // private let local: LocalDataSource
+    
 }
 
 extension SignInInteractor {
     
-    func login(request: SignInRequest, completion:  (SignInResponse?, SignInErrorResponse?) -> Void) {
+    func login(loginRequest request: SignInRequest, completion:  (SignInResponse?, SignInErrorResponse?) -> Void) {
+        remote.login(request: request, completion: completion)
 }
 }
