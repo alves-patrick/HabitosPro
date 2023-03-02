@@ -16,7 +16,7 @@ class SignInInteractor {
 
 extension SignInInteractor {
     
-    func login(loginRequest request: SignInRequest, completion:  (SignInResponse?, SignInErrorResponse?) -> Void) {
+    func login(loginRequest request: SignInRequest, completion:  @escaping (SignInResponse?, SignInErrorResponse?) -> Void) {
         remote.login(request: request, completion: completion)
 }
 }
