@@ -38,7 +38,7 @@ class SignInViewModel: ObservableObject {
   func login() {
     self.uiState = .loading
     
-     interactor.login(request: SignInRequest(email: email,
+     interactor.login(loginRequest: SignInRequest(email: email,
                                             password: password)) { (successResponse, errorResponse) in
       
       if let error = errorResponse {
