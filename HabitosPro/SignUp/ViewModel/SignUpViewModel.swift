@@ -57,7 +57,7 @@ class SignUpViewModel: ObservableObject {
      ///           WebService.login(request: SignInRequest(email: self.email,
           //                                              password: self.password)) { (successResponse, errorResponse) in
                   
-         //         if let errorSignIn = errorResponse {
+         //        if let errorSignIn = errorResponse {
           //          DispatchQueue.main.async {
           //            // Main Thread
          //             self.uiState = .error(errorSignIn.detail.message)
@@ -67,15 +67,15 @@ class SignUpViewModel: ObservableObject {
         //          if let successSignIn = successResponse {
         //            DispatchQueue.main.async {
         //              print(successSignIn)
-        //                self.publisher.send(sucess)
+        //               self.publisher.send(sucess)
        //                 self.uiState = .success
          //           }
        //           }
        //
-        //        }
-       //         DispatchQueue.main.async {
+        //     }
+       //        DispatchQueue.main.async {
        //
-       //             }
+       //           }
                 }
             }
         }
