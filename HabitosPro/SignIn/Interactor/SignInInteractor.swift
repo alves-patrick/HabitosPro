@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
  
 class SignInInteractor {
     
@@ -16,7 +17,7 @@ class SignInInteractor {
 
 extension SignInInteractor {
     
-    func login(loginRequest request: SignInRequest, completion:  @escaping (SignInResponse?, SignInErrorResponse?) -> Void) {
-        remote.login(request: request, completion: completion)
+    func login(loginRequest request: SignInRequest) -> Future<SignInResponse, AppError> {
+        return remote.login(request: request, completion: completion)
 }
 }

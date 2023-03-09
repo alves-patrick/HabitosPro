@@ -10,6 +10,7 @@
 		7D0514D229AEC3B1006EB063 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0514D129AEC3B1006EB063 /* RemoteDataSource.swift */; };
 		7D1F3DF12991E1DC00B837B0 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F3DF02991E1DC00B837B0 /* SignInResponse.swift */; };
 		7D295CF929931B6A00C7978E /* SignInErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D295CF829931B6A00C7978E /* SignInErrorResponse.swift */; };
+		7D2AC33229BA74EF00D7B775 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2AC33129BA74EF00D7B775 /* AppError.swift */; };
 		7D52384C2973768400FCF349 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52384B2973768400FCF349 /* Gender.swift */; };
 		7D61BD542975D12C008D8502 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61BD532975D12C008D8502 /* SignUpUIState.swift */; };
 		7D61BD562975D1AD008D8502 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61BD552975D1AD008D8502 /* SignUpViewModel.swift */; };
@@ -44,6 +45,7 @@
 		7D0514D129AEC3B1006EB063 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		7D1F3DF02991E1DC00B837B0 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		7D295CF829931B6A00C7978E /* SignInErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInErrorResponse.swift; sourceTree = "<group>"; };
+		7D2AC33129BA74EF00D7B775 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		7D52384B2973768400FCF349 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		7D61BD532975D12C008D8502 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
 		7D61BD552975D1AD008D8502 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF15F1F298AFA2400E8CC6D /* ErrorResponse.swift */,
+				7D2AC33129BA74EF00D7B775 /* AppError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				7DF15F1C298AF6CA00E8CC6D /* SignUpResponse.swift in Sources */,
 				7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */,
+				7D2AC33229BA74EF00D7B775 /* AppError.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
 				7D0514D229AEC3B1006EB063 /* RemoteDataSource.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
