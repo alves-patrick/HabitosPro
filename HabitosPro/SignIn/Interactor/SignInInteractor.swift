@@ -18,6 +18,6 @@ class SignInInteractor {
 extension SignInInteractor {
     
     func login(loginRequest request: SignInRequest) -> Future<SignInResponse, AppError> {
-        return remote.login(request: request, completion: completion)
+        return remote.login(request: request)
 }
 }
