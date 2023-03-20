@@ -62,11 +62,10 @@ class SignInViewModel: ObservableObject {
  //  /   DispatchQueue.main.async {
 //  /       // Main Thread
   // /      self.uiState = .error(error.detail.message)
- // /    }
-//  /   }
- ///
-// /    if let success = successResponse {
-///       DispatchQueue.main.async {
+ //   }
+//   }
+
+// / //       DispatchQueue.main.async {
 // /        print(success)
  ///       self.uiState = .goToHomeScreen
    ///    }
