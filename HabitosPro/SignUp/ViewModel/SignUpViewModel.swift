@@ -22,6 +22,15 @@ class SignUpViewModel: ObservableObject {
     
     @Published var uiState: SignUpUIState = .none
     
+    
+    private let interactor: SignUpInteractor
+    
+   init(interactor: SignUpInteractor) {
+        
+        self.interactor = interactor
+    }
+    
+    
     func SignUp() {
         self.uiState = .loading
         
@@ -40,7 +49,7 @@ class SignUpViewModel: ObservableObject {
         
         let birthday = formatter.string(from: dateFormatted)
         
-        WebService.postUser(request: SignUpRequest(fullName: fullName,
+        interactor.postUser(request: SignUpRequest(fullName: fullName,
                                                    email: email,
                                                    password: password, document: document,
                                                    phone: phone,

@@ -8,8 +8,9 @@
 import Foundation
 import Combine
 
-class RemoteDataSource {
-    static var shared: RemoteDataSource = RemoteDataSource()
+class SignInRemoteDataSource {
+    
+    static var shared: SignInRemoteDataSource = SignInRemoteDataSource()
     
     private init() {
     }

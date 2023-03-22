@@ -20,6 +20,8 @@
 		7D82DBC729830DB6004178B8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82DBC629830DB6004178B8 /* WebService.swift */; };
 		7D82DBC92983214A004178B8 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82DBC82983214A004178B8 /* SignUpRequest.swift */; };
 		7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */; };
+		7D8FE9B529CBB9FB00A3592D /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FE9B429CBB9FB00A3592D /* SignUpInteractor.swift */; };
+		7D8FE9B729CBBAAC00A3592D /* SignUpRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FE9B629CBBAAC00A3592D /* SignUpRemoteDataSource.swift */; };
 		7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90483F293D650A00E66624 /* HabitosProApp.swift */; };
 		7D904844293D650C00E66624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904843293D650C00E66624 /* Assets.xcassets */; };
 		7D904847293D650C00E66624 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D904846293D650C00E66624 /* Preview Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		7D82DBC629830DB6004178B8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		7D82DBC82983214A004178B8 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		7D82E51A2965DF1B007E4405 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		7D8FE9B429CBB9FB00A3592D /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		7D8FE9B629CBBAAC00A3592D /* SignUpRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRemoteDataSource.swift; sourceTree = "<group>"; };
 		7D90483C293D650A00E66624 /* HabitosPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitosPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D90483F293D650A00E66624 /* HabitosProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitosProApp.swift; sourceTree = "<group>"; };
 		7D904843293D650C00E66624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		7D6DCCCC296F93B4001BB461 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				7D8FE9B329CBB9BC00A3592D /* Interactor */,
 				7D6DCCCF296F93E6001BB461 /* View */,
 				7D6DCCCE296F93DD001BB461 /* ViewModel */,
 				7D6DCCCD296F93D7001BB461 /* Model */,
@@ -162,6 +167,14 @@
 				7DB8FF3929674A89004F3B6E /* SplashViewRouter.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D8FE9B329CBB9BC00A3592D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D8FE9B429CBB9FB00A3592D /* SignUpInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		7D904833293D650A00E66624 = {
@@ -330,6 +343,7 @@
 		7DF2EDC4299C4E550064E539 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				7D8FE9B629CBBAAC00A3592D /* SignUpRemoteDataSource.swift */,
 				7DF2EDC5299C4E6F0064E539 /* SignInInteractor.swift */,
 			);
 			path = Interactor;
@@ -409,6 +423,7 @@
 				7D91AFDD2946983700363000 /* SplashUIState.swift in Sources */,
 				7D2AC33229BA74EF00D7B775 /* AppError.swift in Sources */,
 				7D904840293D650A00E66624 /* HabitosProApp.swift in Sources */,
+				7D8FE9B729CBBAAC00A3592D /* SignUpRemoteDataSource.swift in Sources */,
 				7D0514D229AEC3B1006EB063 /* RemoteDataSource.swift in Sources */,
 				7DB8FF3829674968004F3B6E /* SignInViewModel.swift in Sources */,
 				7DBB21F72981DA7300655654 /* LoadingButtonView.swift in Sources */,
@@ -429,6 +444,7 @@
 				7D52384C2973768400FCF349 /* Gender.swift in Sources */,
 				7D6DCCD1296F9414001BB461 /* SignUpView.swift in Sources */,
 				7D82E51B2965DF1B007E4405 /* SplashViewModel.swift in Sources */,
+				7D8FE9B529CBB9FB00A3592D /* SignUpInteractor.swift in Sources */,
 				7DC76A3E297EFEB10067DA70 /* CustomTextFieldStyle.swift in Sources */,
 				7D65F03D29799DA600EAE3FF /* EditTextView.swift in Sources */,
 				7D82DBC92983214A004178B8 /* SignUpRequest.swift in Sources */,
