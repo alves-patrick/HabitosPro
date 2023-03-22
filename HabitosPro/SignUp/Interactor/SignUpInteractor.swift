@@ -18,6 +18,6 @@ class SignUpInteractor {
 extension SignUpInteractor {
     
     func postUser(signUpRequest request: SignUpRequest) -> Future<Bool, AppError> {
-        return remote.login(request: request)
+        return remote.postUser(request: request)
 }
 }

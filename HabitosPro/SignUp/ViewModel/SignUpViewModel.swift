@@ -49,19 +49,31 @@ class SignUpViewModel: ObservableObject {
         
         let birthday = formatter.string(from: dateFormatted)
         
-        interactor.postUser(request: SignUpRequest(fullName: fullName,
-                                                   email: email,
-                                                   password: password, document: document,
-                                                   phone: phone,
-                                                   birthday: birthday,
-                                                   gender: gender.index)) {(sucessResponse, errorResponse) in
-            if let error = errorResponse {
-                DispatchQueue.main.async {
-                    self.uiState = .error(error.detail)
-                }
-            }
+             let signUpRequest = SignUpRequest(fullName: fullName,
+                                               email: email,
+                                               password: password, document: document,
+                                               phone: phone,
+                                               birthday: birthday,
+                                               gender: gender.index)
+        
+        interactor.postUser(signUpRequest: signUpRequest)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                
+            } receiveValue: { created in
+                if (created) {
+                    print(created)
+                    self.publisher.send(created)
+                    self.uiState = .success
+        
+    //    interactor.postUser(signUpRequest: signUpRequest) { (sucessResponse, errorResponse) in
+      //      if let error = errorResponse {
+       //         DispatchQueue.main.async {
+       //             self.uiState = .error(error.detail)
+       //         }
+       //     }
             
-            if let sucess = sucessResponse {
+        //    if let sucess = sucessResponse {
                 
      //         WebService.login(request: SignInRequest(email: self.email,
           //    /                                          password: self.password)) { (successResponse, errorResponse) in

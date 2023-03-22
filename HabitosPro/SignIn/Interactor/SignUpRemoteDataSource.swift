@@ -25,7 +25,7 @@ class SignUpRemoteDataSource {
                         if error == .badRequest {
                             let decoder = JSONDecoder()
                             let response = try? decoder.decode(ErrorResponse.self, from: data)
-                            promise(.failure(<#T##AppError#>.response(message: response?.detail ?? "Erro interno no servidor")))
+                            promise(.failure(AppError.response(message: response?.detail ?? "Erro interno no servidor")))
                             // completion(nil, response)
                         }
                     }
