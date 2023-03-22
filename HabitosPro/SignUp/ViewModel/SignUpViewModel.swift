@@ -59,6 +59,13 @@ class SignUpViewModel: ObservableObject {
         interactor.postUser(signUpRequest: signUpRequest)
             .receive(on: DispatchQueue.main)
             .sink { completion in
+                switch(completion) {
+                case .failure(let appError):
+                    self.uiState = .error(appError.message)
+                    break
+                case .finished:
+                    break
+                }
                 
             } receiveValue: { created in
                 if (created) {
