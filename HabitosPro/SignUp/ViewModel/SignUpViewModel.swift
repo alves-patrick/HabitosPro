@@ -74,23 +74,22 @@ class SignUpViewModel: ObservableObject {
                     self.uiState = .success
         
     //    interactor.postUser(signUpRequest: signUpRequest) { (sucessResponse, errorResponse) in
-      //      if let error = errorResponse {
-       //         DispatchQueue.main.async {
-       //             self.uiState = .error(error.detail)
-       //         }
-       //     }
+      ///      if let error = errorResponse {
+       //       DispatchQueue.main.async {
+       //           self.uiState = .error(error.detail)
+       //   }
             
         //    if let sucess = sucessResponse {
                 
-     //         WebService.login(request: SignInRequest(email: self.email,
-          //    /                                          password: self.password)) { (successResponse, errorResponse) in
+     //       WebService.login(request: SignInRequest(email: self.email,
+          //                                           password: self.password)) { (successResponse, errorResponse) in
                   
-         //        if let errorSignIn = errorResponse {
+         //  /     if let errorSignIn = errorResponse {
           //       DispatchQueue.main.async {
-          //          // Main Thread
-         //            self.uiState = .error(errorSignIn.detail.message)
-         //         }
-         //    }
+          //         // Main Thread
+         //           self.uiState = .error(errorSignIn.detail.message)
+         //        }
+         //  /  }
                   
         //      if let successSignIn = successResponse {
         //          DispatchQueue.main.async {
