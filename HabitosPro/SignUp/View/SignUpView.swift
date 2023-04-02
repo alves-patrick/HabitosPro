@@ -159,7 +159,7 @@ struct SignUpView: View {
     struct SignUpView_Previews: PreviewProvider {
         static var previews: some View {
                 ForEach(ColorScheme.allCases, id: \.self) {
-                    SignUpView(viewModel: SignUpViewModel())
+                    SignUpView(viewModel: SignUpViewModel(interactor: SignUpInteractor))
                         .previewDevice("iPhone 14 Pro Max")
                         .preferredColorScheme($0)
                 }
