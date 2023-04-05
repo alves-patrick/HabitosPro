@@ -20,6 +20,9 @@ class SignUpViewModel: ObservableObject {
     
     var publisher: PassthroughSubject<Bool, Never>!
     
+    private var cancellableSignUp: AnyCancellable?
+    private var cancellableSignIn: AnyCancellable?
+    
     @Published var uiState: SignUpUIState = .none
     
     
@@ -28,6 +31,12 @@ class SignUpViewModel: ObservableObject {
    init(interactor: SignUpInteractor) {
         
         self.interactor = interactor
+    }
+    
+    deinit {
+        cancellableSignUp?.cancel()
+        cancellableSignIn?.cancel()
+        
     }
     
     
@@ -56,7 +65,7 @@ class SignUpViewModel: ObservableObject {
                                                birthday: birthday,
                                                gender: gender.index)
         
-        interactor.postUser(signUpRequest: signUpRequest)
+        cancellableSignUp = interactor.postUser(signUpRequest: signUpRequest)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch(completion) {
@@ -71,7 +80,7 @@ class SignUpViewModel: ObservableObject {
                 if (created) {
                     
                     
-                    self.interactor.login(signInRequest: SignInRequest(email: self.email, password: self.password))
+                    self.cancellableSignIn = self.interactor.login(signInRequest: SignInRequest(email: self.email, password: self.password))
                         .receive(on: DispatchQueue.main)
                         .sink { completion in
                             switch(completion) {
@@ -88,38 +97,7 @@ class SignUpViewModel: ObservableObject {
                         }
                 }
             }
-                   // print(created)
-                   // self.publisher.send(created)
-                   // self.uiState = .success
-                    ///
-                    ///    interactor.postUser(signUpRequest: signUpRequest) { (sucessResponse, errorResponse) in
-                    ///     if let error = errorResponse {
-                    ///  DispatchQueue.main.async {
-                    ///           self.uiState = .error(error.detail)
-                    // /  }
-                    
-                    ///    if let sucess = sucessResponse {
-                    
-                    ///      WebService.login(request: SignInRequest(email: self.email,
-                    // /                                         password: self.password)) { (successResponse, errorResponse) in
-                    
-                    // / if let errorSignIn = errorResponse {
-                    //      DispatchQueue.main.async {
-                    // /       // Main Thread
-                    //          self.uiState = .error(errorSignIn.detail.message)
-                    //  /    }
-                    // /  }
-                    
-                    //     if let successSignIn = successResponse {
-                    //  /      DispatchQueue.main.async {
-                    // /
-                    //  /    }
-                    //  /    }
-                    ///
-                    //   }
-                    //  /  DispatchQueue.main.async {
-                    //
-                    // /        }
+          
                 }
             }
 
