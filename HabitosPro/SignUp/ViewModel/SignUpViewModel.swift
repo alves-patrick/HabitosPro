@@ -81,9 +81,13 @@ class SignUpViewModel: ObservableObject {
                             case .finished:
                                 break
                             }
-                        } receiveValue: { SignInResponse in
-                            <#code#>
+                        } receiveValue: { successSignIn in
+                            print(created)
+                            self.publisher.send(created)
+                            self.uiState = .success
                         }
+                }
+            }
                    // print(created)
                    // self.publisher.send(created)
                    // self.uiState = .success
@@ -108,9 +112,7 @@ class SignUpViewModel: ObservableObject {
                     
                     //     if let successSignIn = successResponse {
                     //  /      DispatchQueue.main.async {
-                    // /       print(successSignIn)
-                    //         self.publisher.send(sucess)
-                    //  /              self.uiState = .success
+                    // /
                     //  /    }
                     //  /    }
                     ///
@@ -120,9 +122,8 @@ class SignUpViewModel: ObservableObject {
                     // /        }
                 }
             }
-        }
 
-        }
+       
         
     
 
