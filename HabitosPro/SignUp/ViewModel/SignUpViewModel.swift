@@ -69,9 +69,24 @@ class SignUpViewModel: ObservableObject {
                 
             } receiveValue: { created in
                 if (created) {
-                    print(created)
-                    self.publisher.send(created)
-                    self.uiState = .success
+                    
+                    
+                    self.interactor.login(signInRequest: SignInRequest(email: self.email, password: self.password))
+                        .receive(on: DispatchQueue.main)
+                        .sink { completion in
+                            switch(completion) {
+                            case .failure(let appError):
+                                self.uiState = .error(appError.message)
+                                break
+                            case .finished:
+                                break
+                            }
+                        } receiveValue: { SignInResponse in
+                            <#code#>
+                        }
+                   // print(created)
+                   // self.publisher.send(created)
+                   // self.uiState = .success
                     ///
                     ///    interactor.postUser(signUpRequest: signUpRequest) { (sucessResponse, errorResponse) in
                     ///     if let error = errorResponse {
