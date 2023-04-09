@@ -95,17 +95,13 @@ class SignUpViewModel: ObservableObject {
                             self.publisher.send(created)
                             self.uiState = .success
                         }
-                }
-            }
-          
-                }
+                     }
+                  }
+               }
             }
 
        
-        
-    
-
-extension SignUpViewModel {
+    extension SignUpViewModel {
   func homeView() -> some View {
       return SignInViewRouter.makeHomeView()
 
