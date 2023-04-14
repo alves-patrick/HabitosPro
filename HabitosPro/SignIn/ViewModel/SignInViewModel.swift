@@ -58,20 +58,20 @@ class SignInViewModel: ObservableObject {
       self.uiState = .goToHomeScreen
    }
  ///
- ///    if let error = errorResponse {
- /// /   DispatchQueue.main.async {
-///       // Main Thread
-  ///      self.uiState = .error(error.detail.message)
- ///   }
-///   }
-
+ // /   if let error = errorResponse {
+ // /DispatchQueue.main.async {
+///  /     // Main Thread
+  // /    self.uiState = .error(error.detail.message)
+ //   /}
+//   /}
+//
 ///     DispatchQueue.main.async {
-///        print(success)
- ///     self.uiState = .goToHomeScreen
+// /      print(success)
+ // /   self.uiState = .goToHomeScreen
    ///    }
-///    }
+//   /}
    
-///   }
+//  /}
   }
   
 }
